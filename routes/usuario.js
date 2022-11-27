@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-require("../models/usuario")
+require("../models/Usuario")
 const Usuario = mongoose.model("usuarios")
 require("../models/Postagem")
 const Postagem = mongoose.model("postagens")
