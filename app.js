@@ -84,4 +84,14 @@ const start = async () => {
     }
 }
 
+<<<<<<< HEAD
 start()
+=======
+
+
+//Outros
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log("Servidor Rodando")
+})
+>>>>>>> 8b98182e052c75795e60c95ef3c9cf780f745f37
