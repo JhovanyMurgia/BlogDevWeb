@@ -1,0 +1,22 @@
+<h2>Lista de postagens</h2>
+<hr>
+<a href="/admin/postagens/add/{{usuarioLogado.nome}}"><button type="button" class="btn btn-success">Nova postagem</button></a>
+<a href="/admin/categorias/add"><button type="button" class="btn btn-success">Adicionar Categoria</button></a>
+<a href="/admin/minhaspostagens/{{usuarioLogado.nome}}"><button type="button" class="btn btn-success">Minhas postagens</button></a>
+
+
+{{#each postagens}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2>{{categoria.nome}}</h2>
+            <h5>{{conteudo}} </h5>
+            <small><b><i>{{usuario}}</i></b></small>
+            <small>{{data}}</small>
+            
+        </div>
+    </div>
+
+{{else}}
+    <p>Sem postagens!</p>
+
+{{/each}}

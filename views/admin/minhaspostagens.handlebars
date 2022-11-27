@@ -1,0 +1,21 @@
+<h2>Postagens de {{usuarioLogado.nome}}</h2>
+<a href="/admin/postagens"><button type="button" class="btn btn-success">Voltar as postagens</button></a>
+{{#each postagens}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2>{{categoria.nome}}</h2>
+            <h5>{{conteudo}} </h5>
+            <small><b><i>{{usuario}}</i></b></small>
+            <small>{{data}}</small>
+            <form action="/admin/minhaspostagens/deletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
+            
+        </div>
+    </div>
+
+{{else}}
+    <p>Sem postagens!</p>
+
+{{/each}}
