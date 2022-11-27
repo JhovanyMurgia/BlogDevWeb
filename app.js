@@ -72,16 +72,7 @@ app.use('/usuarios', usuarios)
 
 
 //Outros
-const port = process.env.PORT || 3000
-const start = async () => {
-    try {
-        mongoose.connect(process.env.MONGO_URI).catch(err => console.log(err))
-        app.listen(port, () => {
-            console.log(`Listen on port ${port}.`)
-        })
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-start()
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log("Servidor Rodando")
+})
