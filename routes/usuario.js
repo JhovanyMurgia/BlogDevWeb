@@ -41,7 +41,7 @@ router.post("/registro", (req, res) => {
 
                 novoUsuario.save().then(() => {
                     req.flash("success_mes", "Usuário criado com sucesso!")
-                    res.redirect('/admin/postagens')
+                    res.redirect("/usuarios/login")
                 }).catch((err) => {
                     req.flash("error_msg", "Houve um erro ao criar usuário!")
                     res.redirect("/usuarios/registro")
